@@ -1,0 +1,11 @@
+{
+  "name": "curso-node",
+  "version": "0.1.0",
+  "description": "Curso de node.js de escalab",
+  "main": "src/index.js",
+  "scripts": {
+    "service": "node src/index.js"
+  },
+  "author": "oscargm",
+  "license": "ISC"
+}
