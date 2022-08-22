@@ -4,12 +4,13 @@
   "description": "Curso de node.js de escalab",
   "main": "src/index.js",
   "scripts": {
-    "service": "node src/index.js",
-    "http": "nodemon src/httpExample/index.js"
+    "service": "node -r dotenv/config src/index.js",
+    "http": "nodemon -r dotenv/config src/httpExample/index.js"
   },
   "author": "oscargm",
   "license": "ISC",
   "devDependencies": {
+    "dotenv": "^16.0.1",
     "nodemon": "^2.0.19"
   }
 }
