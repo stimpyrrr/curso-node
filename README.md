@@ -78,3 +78,18 @@ PORT = 3000
 ```js
 const PORT = process.env.PORT
 ```
+---
+## Instalación de Express
+```js
+npm i express
+```
+### Importar **Express**:
+```js
+const express = require('express')
+```
+---
+### Instalación de Morgan
+> Nos permite hace un print de todos los request que vengan. Crea un middleware de loggeo.
+```js
+npm i morgan
+```
