@@ -9,15 +9,17 @@ const PORT = '3000'
  * el req.url muestra cual es la url desde que se está llamando mi servidor.
 */ 
 const server = http.createServer((req, res) => {
-    console.log('method:', req.method)
-    console.log('url:', req.url)
-
-    if(req.method === 'GET') 
-        res.write('You have used GET method')
-    else if(req.method === 'GET') 
-        res.write('You have used POST method')
-
-    res.end()// termina la ejecución
+        // Creación de Cabecera
+        res.setHeader('Content-Type', 'application/json')
+        // Tipo de respuesta
+        res.writeHead(200)
+        // Le digo a mi servidor que envie un JSON.stringify
+        return res.end(
+            JSON.stringify({
+                message: `You have used ${req.method} method`,
+                url: req.url
+            })
+        )
 })
 
 /** Listen para escuchar un puerto
