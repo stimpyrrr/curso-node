@@ -93,3 +93,13 @@ const express = require('express')
 ```js
 npm i morgan
 ```
+---
+### Instalar nanoID
+> Para crear ID aleatorias
+```js
+npm i nanoid
+```
+---
+### Datos Varios
+> * En esta app se puntos de acceso que es crear archivos **index.js** en cada carpeta, y este archivo index lo único que hacer es exportar. 
+> * hola
