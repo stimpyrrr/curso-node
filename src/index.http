@@ -18,3 +18,15 @@ Content-Type: application/json
     "name": "Caleb",
     "email": "caleb.parra@gmail.com"
 }
+
+
+###
+DELETE http://localhost:2000/user/rHb0R5WlJdiiZDKWJhdZ0
+
+###
+PATCH http://localhost:2000/user/PgV6LmWuUyFNxABYGkK6
+Content-Type: application/json
+
+{
+    "email": "Steve_parra@gmail.com"
+}

@@ -30,5 +30,51 @@ UserRouter.route('/user')
         error: false
     }) */
 })
+//TODO: posible titulo incompleto de commit "enrutadores" pero no está terminada la sección aún
+UserRouter.route('/user/:id')
+.delete((req, res) => {
+    const { params: { id } } = req
+    /**
+     * Predicado es una función que devuelve un booleano
+     * Boolean(users.find(user => user.id === id)) wrappear para castear en booleano
+     */
+    const userIndex = users.findIndex(user => user.id === id)
 
+    if(userIndex === -1)
+        return response({  
+            message: `User with id: ${id} was not found`,
+            res,
+            status: 404
+        })
+    
+
+    users.splice(userIndex, 1)
+    response({ error: false, message: users, res, status: 200})
+})
+.patch((req, res) => {
+    const { 
+        body: { name, email}, 
+        params: { id } 
+    } = req
+    /**
+     * Predicado es una función que devuelve un booleano
+     * Boolean(users.find(user => user.id === id)) wrappear para castear en booleano
+     */
+    const userIndex = users.findIndex(user => user.id === id)
+
+    if(userIndex === -1)
+        return response({  
+            message: `User with id: ${id} was not found`,
+            res,
+            status: 404
+        })
+    
+
+    users.splice(userIndex, 1, {
+        ...users[userIndex],
+        ...(name && { name }),
+        ...(email && { email })
+    })
+    response({ error: false, message: users, res, status: 200})
+})
 module.exports = UserRouter

@@ -101,4 +101,4 @@ npm i nanoid@^3 //compatible con esta versión de node
 ```
 ---
 ### Datos Varios
-> * En esta app se puntos de acceso que es crear archivos **index.js** en cada carpeta, y este archivo index lo único que hacer es exportar. 
+> * En esta app da puntos de acceso que es crear archivos **index.js** en cada carpeta, y este archivo index lo único que hacer es exportar. 
